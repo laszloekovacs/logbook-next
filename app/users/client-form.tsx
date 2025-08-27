@@ -1,11 +1,13 @@
+'use client'
+
 import { useFormState } from "react-dom";
 import { onFormAction } from "./actions"
-import { useState } from "react";
+import { useActionState, useState } from "react";
 
-export function OtherForm() {
+export function ClientForm() {
     const [first, setFirst] = useState("")
 
-    const [state, action] = useFormState(onFormAction, {
+    const [state, action] = useActionState(onFormAction, {
         message: ""
     })
 

@@ -1,14 +1,16 @@
-"use client"
+'use client'
 
-import { createUser } from "./actions"
 
-export const CreateUserForm = () => {
+export const CreateUserForm = ({
+    createUser,
+}: {
+    createUser: (formData: FormData) => void
+}) => {
+
     return (
         <div>
             <h1>Users</h1>
-
             <form action={createUser}>
-
                 <label htmlFor="name">
                 </label>
 

@@ -1,9 +1,9 @@
+"use server"
 import z from "zod"
 
 
 
 export async function createUser(formData: FormData) {
-    "use server"
 
     const createUserSchema = z.object({
         name: z.string()

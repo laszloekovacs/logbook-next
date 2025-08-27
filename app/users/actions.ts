@@ -18,3 +18,15 @@ export async function createUser(formData: FormData) {
     // revalidate if users are displayed on same page
     // reavalidatePath("/users")
 }
+
+type FormState = {
+    message: string
+}
+
+export async function onFormAction(prevState: FormState, data: FormData) {
+    console.log("server action called")
+
+    return {
+        message: "form data processed"
+    }
+}
